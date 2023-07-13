@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+:root {
+    --ff-Rubik: 'Rubik', sans-serif;
+
+    /* #### Text */
+
+    --PaleViolet: hsl(276, 100%, 81%); /*(sub-heading at the top of the app UI)*/
+    --ModerateViolet: hsl(276, 55%, 52%); /*(chat on the left)*/
+    --DesaturatedDarkViolet: hsl(271, 15%, 43%); /*(chat on the right)*/
+    --GrayishBlue: hsl(206, 6%, 79%); /*(placeholder text)*/
+    --VeryDarkDesaturatedViolet: hsl(271, 36%, 24%); /*(main heading)*/
+    --DarkGrayishViolet: hsl(270, 7%, 64%) /*(paragraph)*/;
+    /* #### Gradients */
+
+    /* These two colors are the vibrant background colors you see throughout the design and are applied as a linear gradient: */
+
+    --LightMagenta: hsl(293, 100%, 63%); /**/
+    --LightViolet: hsl(264, 100%, 61%); /**/
+
+    /* ### Secondary */
+
+    --White: hsl(0, 0%, 100%); /**/
+    --LightGrayishViolet: hsl(270, 20%, 96%); /* (app background)*/
+    --VeryDarkDesaturatedViolet: hsl(271, 36%, 24%); /* (submit button background)*/
+    --VeryLightMagenta: hsl(289, 100%, 72%); /*(radio button outline)*/
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--ff-Rubik);
+    font-size: 16px;
+    font-weight: 400;
+    background-color: var(--LightGrayishViolet);
+}
+
+.fondo__imagen-izquierda {
+    position: absolute;
+    top: -200px;
+    right: -125px;
+    width: 1000px;
+    height: 375px;
+    background: linear-gradient(90deg, var(--LightMagenta) 0%, var(--LightViolet) 100%);
+    border-radius: 500px;
+    transform: rotateZ(90deg);
+    z-index: -100;
+}
+
+.container {
+    width: 375px;
+    height: 936px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 63px 35px;
+}
+
+.movil {
+    border: 10px solid white;
+    width: 228px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: var(--LightGrayishViolet);
+    border-radius: 28px;
+    font-size: 0.5rem;
+    overflow: hidden;
+    margin-bottom: 70px;
+    box-shadow: 0 0 50px gray;
+}
+
+.movil__cabecera {
+    background: linear-gradient(90deg, var(--LightViolet) 0%, var(--LightMagenta) 100%);
+    height: 66px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 0 15px;
+    border-radius: 0 0 8px 8px;
+    position: relative;
+}
+
+.movil__cabecera--white {
+    position: absolute;
+    top: -40px;
+    left: 45px;
+    width: 130px;
+    height: 50px;
+    background-color: var(--White);
+    border-radius: 8px;
+}
+.movil_cabecera--escribiendo {
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+    color: var(--White);
+}
+.movil_cabecera--menor {
+    font-size: 1rem;
+    color: white;
+}
+.movil_cabecera--avatar {
+    width: 25px;
+    height: 25px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+.movil_cabecera--datos {
+    display: flex;
+    flex-direction: column;
+}
+.movil__cabecera--name {
+    color: white;
+    font-weight: 500;
+    font-size: 0.7rem;
+}
+.movil__cabecera--available {
+    color: var(--PaleViolet);
+}
+.movil_cabecera--tres-puntos {
+    color: white;
+    font-size: 1.5rem;
+    transform: rotateZ(90deg);
+    padding-bottom: 70px;
+}
+
+.movil__chat-izquierdo {
+    border-radius: 8px 8px 8px 5px;
+    width: 128px;
+    color: var(--ModerateViolet);
+    background-color: var(--GrayishBlue);
+    opacity: 0.8;
+    margin-left: 6px;
+    padding: 8px;
+}
+
+.movil__chat-derecho {
+    border-radius: 8px 8px 5px 8px;
+    color: var(--DesaturatedDarkViolet);
+    background-color: var(--White);
+    align-self: flex-end;
+    margin-right: 6px;
+    margin-left: 70px;
+    padding: 8px 5px;
+    text-align: start;
+    opacity: 0.8;
+}
+
+.movil__fotos {
+    display: flex;
+    align-self: flex-end;
+    justify-content: flex-end;
+    padding-right: 10px;
+    gap: 10px;
+}
+.movil__fotos--imagen {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+}
+
+.movil__hora-minute {
+    width: 160px;
+    height: 30px;
+    background: linear-gradient(90deg, var(--LightMagenta) 0%, var(--LightViolet) 100%);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 15px 10px;
+}
+
+.movil__hora-minute--check {
+    width: 15px;
+    height: 15px;
+    border: 1px solid var(--White);
+    border-radius: 50%;
+    color: var(--VeryLightMagenta);
+}
+
+.movil__hora-minute--minutes {
+    font-size: 0.5rem;
+    font-weight: 500;
+    color: var(--White);
+}
+.movil__hora-minute--precio {
+    flex-grow: 1;
+    text-align: right;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--White);
+    justify-self: flex-end;
+}
+
+.movil__submit {
+    background-color: var(--White);
+    padding: 10px;
+    border-radius: 50px;
+    margin: 10px 8px 0px;
+    color: var(--GrayishBlue);
+    display: flex;
+    align-items: center;
+}
+
+.movil__submit-button {
+    flex-grow: 1;
+    text-align: right;
+}
+
+.movil__submit-button--button {
+    background-color: var(--VeryDarkDesaturatedViolet);
+    font-weight: 700;
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    border-radius: 50%;
+}
+
+.texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.texto__h1 {
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: var(--VeryDarkDesaturatedViolet);
+}
+
+.texto__parrafo {
+    text-align: center;
+    line-height: 1.8rem;
+    color: var(--DarkGrayishViolet);
+}
+
+/* -------------------------------- ANIMACIONES ---------------------------------- */
+.movil_cabecera--escribiendo {
+    visibility: hidden;
+    animation: escribiendo 3s linear 3s 3 forwards;
+}
+.chat {
+    visibility: hidden;
+    animation: chat 1s forwards ease-in-out;
+}
+
+.chat-1 {
+    animation-delay: 1s;
+}
+.chat-2 {
+    animation-delay: 2s;
+}
+.chat-3 {
+    animation-delay: 4.5s;
+}
+.chat-4 {
+    animation-delay: 7.5s;
+}
+.chat-5 {
+    animation-delay: 10.5s;
+}
+.chat-6 {
+    animation-delay: 14s;
+}
+.chat-7 {
+    animation-delay: 16s;
+}
+.chat-8 {
+    animation-delay: 18s;
+}
+
+@keyframes chat {
+    0% {
+        visibility: hidden;
+    }
+    100% {
+        visibility: visible;
+    }
+}
+
+@keyframes escribiendo {
+    0% {
+        visibility: visible;
+    }
+    50% {
+        visibility: hidden;
+    }
+}
+
+/* ---------------------------------- FOOTER -------------------------------------- */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* ------------------------- MEDIA QUERY(1440px)--------------------- */
+
+@media only screen and (min-width: 1440px) {
+    body {
+        overflow: hidden;
+    }
+    .fondo__imagen-izquierda {
+        top: -50px;
+        left: -350px;
+        width: 1000px;
+        height: 500px;
+    }
+
+    .fondo__imagen-derecha {
+        position: absolute;
+        bottom: -100px;
+        right: -400px;
+        width: 1000px;
+        height: 500px;
+        background: linear-gradient(90deg, rgb(202, 199, 199) 0%, var(--White) 100%);
+        border-radius: 500px;
+        transform: rotateZ(90deg);
+        z-index: -100;
+        opacity: 0.1;
+    }
+
+    .container {
+        width: 820px;
+        height: 510px;
+        flex-direction: row;
+        margin-top: 145px;
+        margin-left: 360px;
+        padding: 0;
+        gap: 100px;
+    }
+
+    .movil {
+        width: 228px;
+        height: 500px;
+        margin: 0;
+    }
+
+    .texto {
+        width: 458px;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .texto__parrafo {
+        text-align: left;
+    }
+}
